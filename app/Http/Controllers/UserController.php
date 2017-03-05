@@ -145,7 +145,7 @@ class UserController extends Controller
         
         $user=Auth::user();
         $request->session()->flash('tab', 'account_information');
-        
+            
         $this->validate($request, [
             'username'=>'required|unique:users,username,'.$user->id.'|max:255',
             // 'old_password'=>'required|in:'.$user->password,
