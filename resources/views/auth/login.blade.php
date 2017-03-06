@@ -10,13 +10,13 @@
     </head>
     <body class="skin-brand-light hold-transition login-page" style="background: #F2F2F2">
 
-            <div class="login-box">
+            <div class="login-box  ">
                 <div class='login-box-header bg-brand'><h4>{{ Config::get('app.name') }}</h4></div>
                 <div class="login-box-body">
                     @if($errors->has('login'))
                         @include('includes.alert',['type'=>"danger",'content'=>$errors->first('login')])
                     @endif
-                    <h4 class="login-box-msg text-brand">Login to your Account</h4>
+                    <h4 class="login-box-msg ">Login to your Account</h4>
                     <form role="form" method="POST" action="{{ url('/login') }}">
                     {{ csrf_field() }}
                         <div class="form-group has-feedback {{ $errors->has('username') ? ' has-error' : '' }}">
